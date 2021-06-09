@@ -11,3 +11,4 @@ The Shell Scripting work
 8-firstdelete removes the /tmp/holberton/betty file
 9-firstdirdeletion removes the /tmp/holberton/ folder
 10-back changes working directory to the previous one
+11-lists lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
