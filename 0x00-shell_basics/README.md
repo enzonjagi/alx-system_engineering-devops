@@ -5,3 +5,4 @@ The Shell Scripting work
 2-bring_me_home changes working directory to the user's home directory
 3-listfiles lists the long format of the contents in the current directory
 4-listmorefiles lists the long format of the contents in a folder, inclusive of hidden ones
+5-listfilesdigitonly lists likeabove, but displays USERID and GROUPID in digits
