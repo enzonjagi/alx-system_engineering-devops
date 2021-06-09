@@ -8,4 +8,5 @@ The Shell Scripting work
 5-listfilesdigitonly lists likeabove, but displays USERID and GROUPID in digits
 6-firstdirectory creates a directory in the /tmp/ directory
 7-movethatfile moves the /tmp/betty file into the /tmp/holberton folder
-8-firstdelet remove the /tmp/holberton/betty file
+8-firstdelete removes the /tmp/holberton/betty file
+9-firstdirdeletion removes the /tmp/holberton/ folder
