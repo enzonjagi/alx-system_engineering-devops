@@ -10,3 +10,4 @@ The Shell Scripting work
 7-movethatfile moves the /tmp/betty file into the /tmp/holberton folder
 8-firstdelete removes the /tmp/holberton/betty file
 9-firstdirdeletion removes the /tmp/holberton/ folder
+10-back changes working directory to the previous one
