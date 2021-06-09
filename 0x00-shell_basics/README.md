@@ -7,4 +7,5 @@ The Shell Scripting work
 4-listmorefiles lists the long format of the contents in a folder, inclusive of hidden ones
 5-listfilesdigitonly lists likeabove, but displays USERID and GROUPID in digits
 6-firstdirectory creates a directory in the /tmp/ directory
-7-movethatfile moves the /tmp/betty file into the /tmp/holberton folder 
+7-movethatfile moves the /tmp/betty file into the /tmp/holberton folder
+8-firstdelet remove the /tmp/holberton/betty file
