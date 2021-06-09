@@ -6,3 +6,4 @@ The Shell Scripting work
 3-listfiles lists the long format of the contents in the current directory
 4-listmorefiles lists the long format of the contents in a folder, inclusive of hidden ones
 5-listfilesdigitonly lists likeabove, but displays USERID and GROUPID in digits
+6-firstdirectory creates a directory in the /tmp/ directory
