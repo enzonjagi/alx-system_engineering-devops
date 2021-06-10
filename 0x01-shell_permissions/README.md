@@ -5,3 +5,4 @@
 3-new_owner changes file ownership to betty
 4-empty creates an empty file called hello
 5-execute changes the mode of the file "hello" to executable
+6-multiple_permissions adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
