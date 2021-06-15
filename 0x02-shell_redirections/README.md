@@ -22,3 +22,4 @@ test
 19-AZ Replace all characters A and c from input to Z and e respectively.
 20-hiago removes all letters c and C from input.
 21-reverse reverse standard input.
+22-users_and_homes a script that displays all users and their home directories, sorted by users. Based on the /etc/passwd
