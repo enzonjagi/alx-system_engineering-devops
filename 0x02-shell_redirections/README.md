@@ -10,3 +10,4 @@
 8-cwd_state stores the contents of "ls -la" into "ls_cwd_content"
 9-duplicate_last_line duplicates the last line of the iacta file
 10-no_more_js deletes all .js files in the current working directory and its subdirectories
+11-directories counts all directories and subdirectories within the current directory, excluding current and parent directories
