@@ -7,3 +7,4 @@
 5-firstlines displays the first 10 lines of /etc/passwd
 6-third_line Displays the third line of the iacta file
 7-file creates the file "\*\\\'\"text here \"\'\\\*$\?\*\*\*\*\*:)"  \  with "Holberton School" text inside it
+8-cwd_state stores the contents of "ls -la" into "ls_cwd_content"
