@@ -13,3 +13,4 @@
 11-directories counts all directories and subdirectories within the current directory, excluding current and parent directories
 12-newest_files prints a sorted list of the 10 newest files in the current working directory
 13-unique prints only the unique characters of a file
+14-findthatword prints lines containing the pattern 'root' in '/etc/passwd' 
