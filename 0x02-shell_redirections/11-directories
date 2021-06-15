@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo find ./* -type d -print | wc -l |ls -l
+sudo find ./* -type d -print | wc -l 
