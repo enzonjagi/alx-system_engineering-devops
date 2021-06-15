@@ -15,3 +15,4 @@
 13-unique prints only the unique characters of a file
 14-findthatword prints lines containing the pattern 'root' in '/etc/passwd' 
 15-countthatword counts the lines in /etc/passwd that contain the string 'bin' 
+16-whatsnext prints from /etc/passwd the lines that contain the text 'root' and 3 lines after each
