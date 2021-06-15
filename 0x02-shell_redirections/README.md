@@ -21,3 +21,4 @@ test
 18-letteronly prints only the lines that begin with a letter
 19-AZ Replace all characters A and c from input to Z and e respectively.
 20-hiago removes all letters c and C from input.
+21-reverse reverse standard input.
