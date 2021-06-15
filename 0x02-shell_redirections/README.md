@@ -17,3 +17,5 @@
 15-countthatword counts the lines in /etc/passwd that contain the string 'bin' 
 16-whatsnext prints from /etc/passwd the lines that contain the text 'root' and 3 lines after each
 17-hidethisword displays the lines in /etc/passwd that don't contain the string 'bin'
+test
+18-letteronly prints only the lines that begin with a letter
