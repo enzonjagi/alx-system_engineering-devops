@@ -8,3 +8,4 @@
 6-third_line Displays the third line of the iacta file
 7-file creates the file "\*\\\'\"text here \"\'\\\*$\?\*\*\*\*\*:)"  \  with "Holberton School" text inside it
 8-cwd_state stores the contents of "ls -la" into "ls_cwd_content"
+9-duplicate_last_line duplicates the last line of the iacta file
