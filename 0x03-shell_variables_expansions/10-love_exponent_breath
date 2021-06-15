@@ -1,2 +1,2 @@
 #!/bin/bash
-expr $BREATH ** $LOVE | wc -l
+echo $(($BREATH**LOVE)) | wc -l
