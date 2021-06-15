@@ -19,3 +19,5 @@
 17-hidethisword displays the lines in /etc/passwd that don't contain the string 'bin'
 test
 18-letteronly prints only the lines that begin with a letter
+19-AZ Replace all characters A and c from input to Z and e respectively.
+20-hiago removes all letters c and C from input.
