@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# prints 10 times but adds a hi on the ninth iteration
+
+COUNTER=0
+while [ $COUNTER -lt 10 ];do
+    if [ "$COUNTER" = "9" ];
+    then
+	echo "Hi"
+    fi
+    echo "Best School"
+    (( COUNTER+=1 ))
+done
