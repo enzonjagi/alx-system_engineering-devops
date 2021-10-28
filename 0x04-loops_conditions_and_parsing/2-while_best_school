@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# this function prints out using the while loop
+
+COUNT=0
+while [ $COUNT -lt 10 ]; do
+      echo "Best School"
+      (( COUNT+=1 ))
+done
