@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# this script implements the until loop
+
+COUNT=20
+until [ $COUNT -lt 10 ]; do
+      echo "Best School"
+      (( COUNT-=1 ))
+done
