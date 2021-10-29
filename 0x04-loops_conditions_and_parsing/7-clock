@@ -10,7 +10,7 @@ while [ $HOUR -lt 13 ]; do
 	echo "Hour: $HOUR"
     elif [ "$MINUTE" = "60" ];
     then
-	(( MINUTE-=59))
+	(( MINUTE=1 ))
 	(( HOUR+=1 ))
 	if [ "$HOUR" = "13" ];
 	then
@@ -18,8 +18,7 @@ while [ $HOUR -lt 13 ]; do
 	else
 	    echo "Hour: $HOUR"
 	fi
-    else
-	echo "$MINUTE"
     fi
+    echo "$MINUTE"
     (( MINUTE+=1 ))
 done
