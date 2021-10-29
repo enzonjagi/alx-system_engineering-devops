@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# FizzBuzz on bash, Interesting
+
+ZERO=0
+FIZZ=0
+BUZZ=0
+FIZZBUZZ=0
+for (( i=1; i<=100; i++ ));do
+    (( FIZZ=i%3 ))
+    (( BUZZ=i%5 ))
+    (( FIZZBUZZ=i%15 ))
+    if [ "$FIZZBUZZ" = "$ZERO" ];
+    then
+	echo "FizzBuzz"
+    elif [ "$FIZZ" = "$ZERO" ];
+    then
+        echo "Fizz"
+    elif [ "$BUZZ" = "$ZERO" ];
+    then
+        echo "Buzz"
+    else
+	echo "$i"
+    fi
+done
