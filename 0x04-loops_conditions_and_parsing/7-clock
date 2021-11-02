@@ -1,24 +1,18 @@
 #!/usr/bin/env bash
 # let's try print the clock till midnight
 
-HOUR=0
-MINUTE=0
-while [ $HOUR -lt 13 ]; do
-    if [ "$MINUTE" = "0" ];
+HOUR=1
+echo echo "Hour: 0"
+while [ $HOUR -le 13 ]; do
+    minute=1
+    while [ $minute -lt 60 ]; do
+	echo "$minute"
+	(( minute++ ))
+    done
+
+    if (( HOUR <= 12 ))
     then
-	(( MINUTE+=1))
 	echo "Hour: $HOUR"
-    elif [ "$MINUTE" = "60" ];
-    then
-	(( MINUTE=1 ))
-	(( HOUR+=1 ))
-	if [ "$HOUR" = "13" ];
-	then
-            echo -n ""
-	else
-	    echo "Hour: $HOUR"
-	fi
     fi
-    echo "$MINUTE"
-    (( MINUTE+=1 ))
+    (( HOUR++ ))
 done
