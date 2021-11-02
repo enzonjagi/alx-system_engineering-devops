@@ -2,7 +2,7 @@
 # let's try print the clock till midnight
 
 HOUR=1
-echo echo "Hour: 0"
+echo "Hour: 0"
 while [ $HOUR -le 13 ]; do
     minute=1
     while [ $minute -lt 60 ]; do
