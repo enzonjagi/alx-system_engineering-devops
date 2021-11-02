@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays content of current directly in a truncated form
+
+for f in *;
+do
+    echo "$f" | cut -d '-' -f 2;
+done;
