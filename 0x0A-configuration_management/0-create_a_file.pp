@@ -1,6 +1,5 @@
 # puppet manifest to create a file in /tmp
-file { '/tmp/school':
-  ensure  => file,
+file { 'school':
   owner   => 'www-data',
   group   => 'www-data',
   mode    => '0744',
