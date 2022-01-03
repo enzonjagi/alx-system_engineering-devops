@@ -1,8 +1,9 @@
-# puppet manifest to create a file in /tmp
+# creates a file in the /tmp diirectory
+
 file { 'school':
+  path    => '/tmp/school',
+  mode    => '0744',
   owner   => 'www-data',
   group   => 'www-data',
-  mode    => '0744',
-  content => 'I love puppet',
-  path    => '/tmp/school',
-  }
+  content => 'I love Puppet',
+}
