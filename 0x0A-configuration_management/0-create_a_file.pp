@@ -1,3 +1,4 @@
+# puppet manifest to create a file in /tmp
 file { '/tmp/school':
   ensure  => 'present',
   replace => 'no',
