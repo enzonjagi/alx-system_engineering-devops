@@ -1,5 +1,5 @@
 # puppet manifest to create a file in /tmp
-file { '/tmp/school':
+file { './tmp/school':
   ensure  => 'present',
   replace => 'no',
   owner   => 'www-data',
