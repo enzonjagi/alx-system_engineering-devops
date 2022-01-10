@@ -3,5 +3,12 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 echo 'Hello World!' > /var/www/html/index.html
-sed -i "/server_name _;/ a\\\trewrite ^/redirect_me https://ansi.org permanent;" /etc/nginx/sites-available/default
+
+#Give the user  ownership to website files
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+# Redirect to /redirect_me to a youtube video
+sed -i '37i\rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+
 service nginx start
