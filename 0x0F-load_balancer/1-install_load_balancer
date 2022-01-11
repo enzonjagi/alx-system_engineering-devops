@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # Installs the load balancer on ubuntu server lb-01
 sudo apt-get update
-sudo apt-get install nginx
-sudo ufw allow 'Nginx HTTP'
 sudo apt-get install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-1.6
 sudo apt-get install haproxy=1.6.\*
-sudo chown ubuntu:ubuntu /etc/nginx/sites-available/default
-sudo sed -i "/listen 80 default_server/a \\\tupstream backend_servers{server 35.231.58.85:9001;server 35.237.250.218:9002;} ;"
-sudo sed -i "/listen 80 default_server/a \\\tproxy_pass http://backend_servers;" /etc/nginx/sites-available/default
+echo "ENABLED=1" >> /etc/default/haproxy
+sudo sed -i "/504.http/a \\nlisten http-in\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\tserver 1231-web-01 34.74.70.205:80 check\n\tserver 1231-web-02 34.224.30.177:80 check" /etc/haproxy/haproxy.cfg
+sudo service haproxy start
