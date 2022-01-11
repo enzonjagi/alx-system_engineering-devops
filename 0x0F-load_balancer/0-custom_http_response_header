@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configure Nginx to add a custom http header
+# shellcheck disable=SC2016
+sudo chown ubuntu:ubuntu /etc/nginx/sites-available/default
+sed -i '59i\\t\tadd_header X-Served-By $server_name;' /etc/nginx/sites-available/default
