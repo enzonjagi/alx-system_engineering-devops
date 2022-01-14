@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Set nginx to listen on port 80
-sudo apt-get update
-sudo apt-get -y ufw
-sudo ufw allow 80
-service nginx reload
+sudo sed -i 's/listen 8080 default_server;.*/listen 80 default_server;/' /etc/nginx/sites-enabled/default 
+sudo sed -i 's/listen \[::\]:8080 default_server ipv6only=on;.*/listen \[::\]:80 default_server;/' /etc/nginx/sites-enabled/default 
+sudo service nginx reload
