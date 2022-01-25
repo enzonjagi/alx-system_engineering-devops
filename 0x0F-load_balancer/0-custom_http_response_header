@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 # configure Nginx to add a custom http header
 # shellcheck disable=SC2154
-sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www
+sudo mkdir /var/www/
+sudo mkdir /var/www/html
+sudo chown -R ubuntu:ubuntu /var/www/html
+# sudo chmod -R 755 /var/www
 echo "Hello World!" > /var/www/html/index.html
 sudo apt-get update
 sudo apt-get -y install nginx
 
 # redirect
 sudo chown ubuntu:ubuntu /etc/nginx/sites-available/default
-sudo ufw allow 'Nginx HTTP'
+# sudo ufw allow 'Nginx HTTP'
 sudo sed -i "/listen 80 default_server/a \\\trewrite ^/redirect_me http\
 s://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-av\
 ailable/default
@@ -23,4 +25,4 @@ nal;}" /etc/nginx/sites-available/default
 
 sudo sed -i "/listen 80 default_server/a \\\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-available/default
 
-sudo service nginx restart
+# sudo service nginx restart

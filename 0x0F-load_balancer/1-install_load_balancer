@@ -2,23 +2,19 @@
 # Installs the load balancer on ubuntu server lb-01
 sudo apt-get update
 sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-1.6
-sudo apt-get install haproxy=1.6.\* -y
+sudo add-apt-repository ppa:vbernat/haproxy-2.4
+sudo apt-get install -y haproxy=2.4.\*
 cat >> /etc/haproxy/haproxy.cfg <<EOF
-frontend Local_Server
+frontend njagindungo_tech
 	 bind *:80
 	 default_backend backend_servers
 backend backend_servers
-	stats enable
-	stats uri /haproxy?stats
 	balance roundrobin
-	option httpclose
-	option forwardfor
 	server 603-web-01 35.231.58.85 check
 	server 603-web-02 35.237.250.218 check
 EOF
-sudo service haproxy restart
+# sudo service haproxy restart
 sudo apt-get update
-sudo apt-get install rsyslog -y
-sudo service rsyslog restart
-sudo service haproxy restart
+sudo apt-get install -y rsyslog
+# sudo service rsyslog restart
+# sudo service haproxy restart
