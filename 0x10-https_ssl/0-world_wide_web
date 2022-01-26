@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# prints the sub domain info of a given argument
+
+dm=$1
+sp="."
+# function to call dig
+call_dig() {
+    nm="$1"
+    sdx="$2"
+    fnx="$sdx$sp$nm"
+    ip_b=$(dig +short "$fnx" | awk "{print}")
+    echo "The subdomain $sdx is a A record and points to $ip_b"
+    }
+if [ -n "$2" ]
+then
+    sd="$2"
+    fn="$sd$sp$dm"
+    ip_a=$(dig +short "$fn" | sed -n 1p)
+    echo "The subdomain $sd is a A record and points to $ip_a"
+else
+    sd1="www"
+    sd2="lb-01"
+    sd3="web-01"
+    sd4="web-02"
+    call_dig "$dm" "$sd1"
+    call_dig "$dm" "$sd2"
+    call_dig "$dm" "$sd3"
+    call_dig "$dm" "$sd4"
+fi
