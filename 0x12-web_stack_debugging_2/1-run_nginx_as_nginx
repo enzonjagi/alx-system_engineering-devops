@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # changes nginx configuration to run as nginx user
-sed -i '2i\user nginx;' /etc/nginx/nginx.conf
+sudo sed -i '2i\user nginx;' /etc/nginx/nginx.conf
+sudo sed -i 's/listen 8080 default_server;.*/listen 80 default_server;/' /etc/nginx/sites-enabled/default
+sudo sed -i 's/listen \[::\]:8080 default_server ipv6only=on;.*/listen \[::\]:80 default_server;/' /etc/nginx/sites-enabled/default
 sudo service nginx restart
