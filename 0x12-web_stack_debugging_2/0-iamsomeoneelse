@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# checks which user it is depending on the given argument
+if [ -n "$1" ]
+then
+    echo "$1"
+fi
