@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# changes nginx configuration to run as nginx user
+sed -i '2i\user nginx;' /etc/nginx/nginx.conf
+sudo service nginx restart
