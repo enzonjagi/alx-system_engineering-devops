@@ -2,6 +2,6 @@
 # checks which user it is depending on the given argument
 if [ -n "$1" ]
 then
-    su - "$1"
-    whoami
+    sudo runuser -l "$1" -c 'whoami'
+    # whoami
 fi
