@@ -2,5 +2,6 @@
 # checks which user it is depending on the given argument
 if [ -n "$1" ]
 then
-    echo "$1"
+    su - "$1"
+    whoami
 fi
