@@ -24,7 +24,8 @@ if len(sys.argv) > 1:
     complete_tasks = 0
     todo_list = []
     with open('{}.csv'.format(e_id), 'w', encoding='UTF8') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, delimiter=',', quotechar='"',
+                            quoting=csv.QUOTE_ALL, lineterminator='\n')
         for task in tasks:
             if task["userId"] == e_id:
                 row = ['{}'.format(e_id),
