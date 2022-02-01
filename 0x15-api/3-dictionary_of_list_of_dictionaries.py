@@ -20,13 +20,14 @@ for employee in employees:
     # get task list for each user
     todo_list = []
     for task in tasks:
-        values = {
-            "username": "{}".format(username),
-            "task": "{}".format(task['title']),
-            "completed": "{}".format(task['completed']),
-        }
-        # list of dictionaries
-        todo_list.append(values)
+        if task['userId'] == e_id:
+            values = {
+                "username": "{}".format(username),
+                "task": "{}".format(task['title']),
+                "completed": "{}".format(task['completed']),
+            }
+            # list of dictionaries
+            todo_list.append(values)
     # get the dictionary of list of dictionaries
     user_tasks[str(e_id)] = todo_list
 # write json to file
