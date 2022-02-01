@@ -18,8 +18,8 @@ for user in users:
     todo_list = []
     for task in tasks:
         values = {
-            "username": "{}".format(username),
-            "task": "{}".format(task['title']),
+            "username": username,
+            "task": task.get('title'),
             "completed": task['completed'],
         }
         # list of dictionaries
