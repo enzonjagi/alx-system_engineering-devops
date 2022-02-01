@@ -4,9 +4,7 @@ import requests
 import sys
 
 
-if sys.argv[1] is None:
-    print('Provide a user Id please')
-else:
+if len(sys.argv) > 1:
     e_id = sys.argv[1]
     e_id = int(e_id)
 
