@@ -19,7 +19,7 @@ if len(sys.argv) > 1:
     # find the employee's data
     for employee in employees:
         if employee['id'] == e_id:
-            queried_user = employee['name']
+            queried_user = employee['username']
     # tasks the user has completed
     complete_tasks = 0
     todo_list = []
