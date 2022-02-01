@@ -6,31 +6,26 @@ import sys
 
 
 # request for data
-users = requests.get("https://jsonplaceholder.typicode.com/users")
-todos = requests.get("https://jsonplaceholder.typicode.com/todos")
-
-employees = users.json()
-tasks = todos.json()
+users = requests.get("https://jsonplaceholder.typicode.com/users").json()
+tasks = requests.get("https://jsonplaceholder.typicode.com/todos").json()
 
 user_tasks = {}
 # get the user id list
-for employee in employees:
-    e_id = employee['id']
-    username = employee['username']
+for user in users:
+    u_id = user['id']
+    username = user['username']
     # get task list for each user
     todo_list = []
     for task in tasks:
-        if task['userId'] == e_id:
-            values = {
-                "username": "{}".format(username),
-                "task": "{}".format(task['title']),
-                "completed": "{}".format(task['completed']),
-            }
-            # list of dictionaries
-            todo_list.append(values)
+        values = {
+            "username": "{}".format(username),
+            "task": "{}".format(task['title']),
+            "completed": task['completed'],
+        }
+        # list of dictionaries
+        todo_list.append(values)
     # get the dictionary of list of dictionaries
-    user_tasks[str(e_id)] = todo_list
+    user_tasks[str(u_id)] = todo_list
 # write json to file
-json_object = json.dumps(user_tasks)
 with open('todo_all_employees.json', 'w') as f:
-    f.write(json_object)
+    json.dump(user_tasks, f)
